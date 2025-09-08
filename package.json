@@ -1,0 +1,14 @@
+{
+  "name": "Scrim-s0pt34adik",
+  "description": "https://scrimba.com/s0pt34adik/head",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
