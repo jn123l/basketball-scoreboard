@@ -2,6 +2,9 @@ scoreHomeEl = document.getElementById("score-home-el")
 scoreGuestEl = document.getElementById("score-guest-el")
 homeEl = document.getElementById("home-el")
 guestEl = document.getElementById("guest-el")
+score1El = document.getElementById("score1-pos")
+score2El = document.getElementById("score2-pos")
+
 
 scoreHomeEl.textContent = 0
 scoreGuestEl.textContent = 0
@@ -10,14 +13,23 @@ function highlightLeader() {
     if(parseInt(scoreHomeEl.textContent) > parseInt(scoreGuestEl.textContent)) {
         homeEl.classList.add("highlight")
         guestEl.classList.remove("highlight")
+
+        score1El.classList.add("pos-adjust")
+        score2El.classList.remove("pos-adjust")
     }
     else if(parseInt(scoreHomeEl.textContent)< parseInt(scoreGuestEl.textContent)) {
         homeEl.classList.remove("highlight")
         guestEl.classList.add("highlight")
+
+        score2El.classList.add("pos-adjust")
+        score1El.classList.remove("pos-adjust")
     }
     else {
         homeEl.classList.remove("highlight")
         guestEl.classList.remove("highlight")
+
+        score1El.classList.remove("pos-adjust")
+        score2El.classList.remove("pos-adjust")
     }
 }
 
