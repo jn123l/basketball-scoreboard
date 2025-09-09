@@ -66,45 +66,65 @@
                 }
             }
 
+            function makeHomeScreenBigger(score) {
+                if(score >= 100) {
+                    score1El.setAttribute("style", "padding-right: 20px;")
+                } 
+            }
+
+            function makeGuestScreenBigger(score) {
+                if(score >= 100) {
+                    score2El.setAttribute("style", "padding-right: 20px;")
+                } 
+            }
+
             function add1home() {
                 let newScore = parseInt(scoreHomeEl.textContent) + 1
                 scoreHomeEl.textContent = newScore
+                makeHomeScreenBigger(newScore)
                 highlightLeader()
             }
 
             function add2home() {
                 let newScore = parseInt(scoreHomeEl.textContent) + 2
                 scoreHomeEl.textContent = newScore
+                makeHomeScreenBigger(newScore)
                 highlightLeader()
             }
 
             function add3home() {
                 let newScore = parseInt(scoreHomeEl.textContent) + 3
                 scoreHomeEl.textContent = newScore
+                makeHomeScreenBigger(newScore)
                 highlightLeader()
             }
 
             function add1guest() {
                 let newScore = parseInt(scoreGuestEl.textContent) + 1
                 scoreGuestEl.textContent = newScore
+                makeGuestScreenBigger(newScore)
                 highlightLeader()
             }
 
             function add2guest() {
                 let newScore = parseInt(scoreGuestEl.textContent) + 2
                 scoreGuestEl.textContent = newScore
+                makeGuestScreenBigger(newScore)
                 highlightLeader()
             }
 
             function add3guest() {
                 let newScore = parseInt(scoreGuestEl.textContent) + 3
                 scoreGuestEl.textContent = newScore
+                makeGuestScreenBigger(newScore)
                 highlightLeader()
             }
 
             function reset() {
                 scoreHomeEl.textContent = 0
                 scoreGuestEl.textContent = 0
+                score1El.setAttribute("style", "padding-right: 0px;")
+                score2El.setAttribute("style", "padding-right: 0px;")
                 highlightLeader()
             }
         </script>
